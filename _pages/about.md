@@ -22,6 +22,8 @@ Husband, Father, Educator, Facilitator, Maker, Nerd
 
 [Presentations](http://www.misterhay.com/presentations)
 
+[Podcasts](http://www.misterhay.com/podcasts)
+
 [Instructables](http://www.instructables.com/member/MisterHay/)
 
 [Thingiverse](http://thingiverse.com/misterhay/things)
