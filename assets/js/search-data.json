@@ -39,8 +39,8 @@
 
   
       ,"page1": {
-          "title": "About Me",
-          "content": "This is where you put the contents of your About page. Like all your pages, it’s in Markdown format. . This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
+          "title": "About MisterHay",
+          "content": "David Hay . Husband, Father, Educator, Facilitator, Maker, Nerd . Twitter . Blog . LinkedIn . YouTube . Facebook . Instagram . Presentations . Instructables . Thingiverse . Pinterest .",
           "url": "https://misterhay.github.io/fastpages/about/",
           "relUrl": "/about/",
           "date": ""
