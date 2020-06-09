@@ -1,13 +1,29 @@
 ---
 layout: page
-title: About Me
+title: About MisterHay
 permalink: /about/
 ---
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
+## David Hay
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+Husband, Father, Educator, Facilitator, Maker, Nerd
 
+[Twitter](https://twitter.com/misterhay)
 
+[Blog](http://haytech.blogspot.ca/)
 
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+[LinkedIn](https://www.linkedin.com/in/misterhay/)
+
+[YouTube](http://youtube.com/m1sterhay)
+
+[Facebook](http://facebook.com/david.hay)
+
+[Instagram](https://www.instagram.com/misterhay/)
+
+[Presentations](http://www.misterhay.com/presentations)
+
+[Instructables](http://www.instructables.com/member/MisterHay/)
+
+[Thingiverse](http://thingiverse.com/misterhay/things)
+
+[Pinterest](http://pinterest.com/misterhay/pins/)
