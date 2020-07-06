@@ -14,7 +14,7 @@
 <tw-storydata name="Callysto Hackathon" startnode="1" creator="Twine" creator-version="2.3.8" ifid="7CA6B43B-F5A6-4F04-8522-D35AD2C97944" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction" tags="" position="348,198" size="200,100">Hello. We need your help to settle an argument. One of the Grade 3 teachers insists that June has nicer weather than August, so we should change the school calendar to have time off in June and go back in August.
 Can you use data science to solve this argument?
 [[No, I can&#39;t help right now]]
-[[Sure, I can help with that]]</tw-passagedata><tw-passagedata pid="2" name="No, I can&#39;t help right now" tags="" position="305,326.5" size="100,100">Okay, thanks anyway. We would have loved your help, but maybe someone else can solve this problem for us.</tw-passagedata><tw-passagedata pid="3" name="Sure, I can help with that" tags="" position="458,321" size="100,100">Great, thank you. The first thing we need to do to solve this argument is find some weather data. We&#39;ll use data from Edmonton, Alberta.
+[[Sure, I can help with that]]</tw-passagedata><tw-passagedata pid="2" name="No, I can&#39;t help right now" tags="" position="305,326" size="100,100">Okay, thanks anyway. We would have loved your help, but maybe someone else can solve this problem for us.</tw-passagedata><tw-passagedata pid="3" name="Sure, I can help with that" tags="" position="458,321" size="100,100">Great, thank you. The first thing we need to do to solve this argument is find some weather data. We&#39;ll use data from Edmonton, Alberta.
 [[Cool, how do we get the data?]]
 [[Umm, why Edmonton?]]</tw-passagedata><tw-passagedata pid="4" name="Cool, how do we get the data?" tags="" position="529,448" size="100,100">Great question. Historical weather data sets are available from the &lt;a href=&quot;https://www.canada.ca/en/environment-climate-change/services/climate-change/canadian-centre-climate-services.html&quot;  target=&quot;_blank&quot;&gt;Canadian Centre for Climate Services&lt;/a&gt;
 We can use an online data science platform called Jupyter notebooks to run code, create visualizations, and write about what we find. To log in to a free server that runs Jupyter notebooks, all you need in order to access it is a Google or Microsoft account.
@@ -28,22 +28,27 @@ We can use an online data science platform called Jupyter notebooks to run code,
 [[I&#39;m a data science master, how do I log in?|Log in to Callysto Hub]]</tw-passagedata><tw-passagedata pid="8" name="I&#39;ll sign up for an account later" tags="" position="456,731" size="100,100">That&#39;s fine. You won&#39;t need an account yet.
 [[Let&#39;s get started]]</tw-passagedata><tw-passagedata pid="9" name="Let&#39;s get started" tags="" position="604,728" size="100,100">We won&#39;t log in to the Callysto Hub yet. For now we&#39;ll just simulate everything here in this story.
 To get the weather data and process it, we are going to use a programming language called **Python**. We will use a couple of *libraries*, which are bundles of computer code written by other people that we can import into our project. We&#39;ll use a code libraries called **pandas** for getting and processing data. This is the code we will run:
-&lt;pre&gt;import pandas as pd&lt;/pre&gt;
+---
+(font:&quot;Courier New&quot;)[import pandas as pd]
+---
 Now that we have imported this library, we can get the data.
 [[I don&#39;t understand about libraries]]
 [[Let&#39;s get some data]]</tw-passagedata><tw-passagedata pid="10" name="I don&#39;t understand about libraries" tags="" position="529,878" size="100,100">This *library* we are importing into our coding project is a bundle of code that people have written in order to make our lives easier. Instead of having to write a bunch of code ourselves in order to handle data, we can &quot;import&quot; and their code and &quot;call&quot; parts of the code when we want to use it.
 For more information about Python and libraries, visit &lt;a href=&quot;https://www.python.org/about&quot; target=&quot;_blank&quot;&gt;About Python&lt;/a&gt;
 [[Let&#39;s get some data]]</tw-passagedata><tw-passagedata pid="11" name="Let&#39;s get some data" tags="" position="679,878" size="100,100">Okay, here&#39;s the code to get weather data from Edmonton from 1901 to 2016.
-&lt;pre&gt;url = &#39;https://climateknowledgeportal.worldbank.org/api/data/get-download-data/historical/tas/1901-2016/53.544388$cckp$-113.490929/53.544388$cckp$-113.490929&#39;
-weather = pd.read&#96;_&#96;csv(url)
-&lt;/pre&gt;
+---
+(font:&quot;Courier New&quot;)[url = &#39;https://climateknowledgeportal.worldbank.org/api/data/get-download-data/historical/tas/1901-2016/53.544388$cckp$-113.490929/53.544388$cckp$-113.490929&#39;
+weather = pd.read&#96;_&#96;csv(url)]
+---
 The latitude and longitude of Edmonton are **53.544388** and **-113.490929**, we could change those to different values in the *url* to get weather data about another location.
 We now have weather data stored in a *variable* called weather.
 [[What&#39;s a variable?]]
 [[Cool, I&#39;ve heard of variables]]
 [[I would like to use data from somewhere else]]</tw-passagedata><tw-passagedata pid="12" name="What&#39;s a variable?" tags="" position="604,1028" size="100,100">You can think of a variable as a place to store information. A variable can hold a number, a string of text, or many other things such as large data sets. For more information about variables in Python, visit [[https://www.tutorialspoint.com/python/python_variable_types.htm]]
 [[Thanks for explaining about variables|Cool, I&#39;ve heard of variables]]</tw-passagedata><tw-passagedata pid="13" name="Cool, I&#39;ve heard of variables" tags="" position="754,1028" size="100,100">Excellent. We can see the data for Edmonton in the **weather** variable with the code:
-&lt;pre&gt;weather&lt;/pre&gt;
+---
+(font:&quot;Courier New&quot;)[weather]
+---
 And it will display:
 &lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
   &lt;thead&gt;
@@ -150,15 +155,20 @@ And it will display:
 1392 rows × 5 columns
 That&#39;s a lot of data, now it&#39;s time to do some data science.
 [[Let&#39;s do it|Let&#39;s do some data science]]</tw-passagedata><tw-passagedata pid="14" name="Let&#39;s do some data science" tags="" position="754,1178" size="100,100">To get just the temperatures in Edmonton in June, we can filter the **weather** data using the following code:
-&lt;pre&gt;june = weather&#96;[&#96;weather&#96;[&#96;&#39; Statistics&#39;&#96;]&#96;==&#39; Jun Average&#39;&#96;]&#96;&lt;/pre&gt;
+---
+(font:&quot;Courier New&quot;)[june = weather&#96;[&#96;weather&#96;[&#96;&#39; Statistics&#39;&#96;]&#96;==&#39; Jun Average&#39;&#96;]&#96;]
+---
 And then get the average June temperature:
-&lt;pre&gt;june.mean()&lt;/pre&gt;
-And we see:
-**Temperature - (Celsius)      14.394828**
+---
+(font:&quot;Courier New&quot;)[june.mean()]
+---
+And we see: **Temperature - (Celsius)      14.394828**
+---
 To get the average August temperature, let&#39;s do the same thing but write it all in one line:
-&lt;pre&gt;weather&#96;[&#96;weather&#96;[&#96;&#39; Statistics&#39;&#96;]&#96;==&#39; Aug Average&#39;&#96;]&#96;.mean()&lt;/pre&gt;
-This results in:
-**Temperature - (Celsius)      15.253449**
+---
+(font:&quot;Courier New&quot;)[weather&#96;[&#96;weather&#96;[&#96;&#39; Statistics&#39;&#96;]&#96;==&#39; Aug Average&#39;&#96;]&#96;.mean()]
+---
+This results in: **Temperature - (Celsius)      15.253449**
 Can we solve the argument now?
 [[Yes|Solve the argument]]
 [[Wait, what was the argument about?]]</tw-passagedata><tw-passagedata pid="15" name="Solve the argument" tags="" position="826,1323" size="100,100">Okay, so based on weather data from Edmonton, Alberta (from 1901 to 2016) the average June temperature is 14.394828 °C and the average August temperature is 15.253449 °C.
@@ -168,18 +178,24 @@ They are pretty close, but what is your recommendation.
 [[Oh yeah, thanks for the reminder|Solve the argument]]</tw-passagedata><tw-passagedata pid="17" name="We should have June and July off school" tags="" position="751,1473" size="100,100">Interesting conclusion. It&#39;s generally about one degree warmer in August than in June, and it would be a big deal to change the calendar.
 [[Okay, keep the calendar the way it is|We should keep it the same, have July and August off school]]
 [[But what about rain?]]</tw-passagedata><tw-passagedata pid="18" name="We should keep it the same, have July and August off school" tags="" position="901,1473" size="100,100">Good idea. Since August seems to be a little warmer let&#39;s keep the school calendar the way it is.
-[[But what about rain?]]</tw-passagedata><tw-passagedata pid="19" name="But what about rain?" tags="" position="751,1623" size="100,100">Good point, we should probably look at precipitation as well using the following code:
-&lt;pre&gt;import pandas as pd
+[[But what about rain?]]</tw-passagedata><tw-passagedata pid="19" name="But what about rain?" tags="" position="751,1623" size="100,100">Good point, we should probably look at precipitation using the following code:
+---
+(font:&quot;Courier New&quot;)[import pandas as pd
 precipitation&#96;&#96;_&#96;&#96;url = &#39;https://climateknowledgeportal.worldbank.org/api/data/get-download-data/historical/pr/1901-2016/53.544388$cckp$-113.490929/53.544388$cckp$-113.490929&#39;
-precipitation = pd.read&#96;_&#96;csv(precipitation&#96;_&#96;url)&lt;/pre&gt;
-June:
-&lt;pre&gt;precipitation&#96;[&#96;precipitation&#96;[&#96;&#39; Statistics&#39;&#96;]&#96;==&#39; Jun Average&#39;&#96;]&#96;.mean()&lt;/pre&gt;
-August:
-&lt;pre&gt;precipitation&#96;[&#96;precipitation&#96;[&#96;&#39; Statistics&#39;&#96;]&#96;==&#39; Aug Average&#39;&#96;]&#96;.mean()&lt;/pre&gt;
+precipitation = pd.read&#96;_&#96;csv(precipitation&#96;_&#96;url)]
+---
+**June:**
+(font:&quot;Courier New&quot;)[precipitation&#96;[&#96;precipitation&#96;[&#96;&#39; Statistics&#39;&#96;]&#96;==&#39; Jun Average&#39;&#96;]&#96;.mean()]
+---
+**August:**
+(font:&quot;Courier New&quot;)[precipitation&#96;[&#96;precipitation&#96;[&#96;&#39; Statistics&#39;&#96;]&#96;==&#39; Aug Average&#39;&#96;]&#96;.mean()]
+---
 To run the above code examples, log in to the Callysto Hub.
 [[Log in to Callysto Hub]]</tw-passagedata><tw-passagedata pid="20" name="I would like to use data from somewhere else" tags="" position="443,1030" size="100,100">We can get the latitude and longitude for soem other location from a site such as &lt;a href=&quot;https://www.latlong.net&quot; target=&quot;_blank&quot;&gt;LatLong.net&lt;/a&gt; and replace the values in the url.
 If we want data from Toronto (43.651890, -79.381706) the url would be
-* https://climateknowledgeportal.worldbank.org/api/data/get-download-data/historical/tas/1901-2016/43.651890$cckp$-79.381706/43.651890$cckp$-79.381706
+---
+(font:&quot;Courier New&quot;)[https://climateknowledgeportal.worldbank.org/api/data/get-download-data/historical/tas/1901-2016/43.651890$cckp$-79.381706/43.651890$cckp$-79.381706]
+---
 We won&#39;t simulate that here, though, you&#39;ll need to log in to the Callysto Hub to try that yourself.
 [[I&#39;ll do that later|Cool, I&#39;ve heard of variables]]
 [[I&#39;m a data science master, how do I log in?|Log in to Callysto Hub]]</tw-passagedata><tw-passagedata pid="21" name="Log in to Callysto Hub" tags="" position="504,1726" size="100,100">Remember when we asked about a Google or Microsoft account? You&#39;ll use that to log in at &lt;a href=&quot;https://hub.callysto.ca&quot; target=&quot;_blank&quot;&gt;hub.callysto.ca&lt;/a&gt;. Don&#39;t worry, Callysto doesn&#39;t collect any personal information about you.
